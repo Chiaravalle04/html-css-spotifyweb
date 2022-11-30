@@ -10,10 +10,16 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
 
+        <!--Fontawesome-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
         <!--Style CSS-->
         <link rel="stylesheet" href="css/style.css">
 
         <title>Spotify</title>
+
+        <!--Favicon-->
+        <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     </head>
 
     <body class="debug">
@@ -26,8 +32,11 @@
 
                     <div class="a-logo">
 
-                        <img src="img/logo.svg" alt="">
+                        <a href="#">
 
+                            <img src="img/logo.svg" alt="">
+                         
+                        </a>
                     </div>
 
                     <nav id="main-nav">
@@ -35,28 +44,28 @@
                         <ul>
 
                             <li>
-                                <a href="#">Home</a>
+                                <a href="#"><i class="fa-solid fa-house fa-xl"></i> Home</a>
                             </li>
 
                             <li>
-                                <a href="#">Cerca</a>
+                                <a href="#"><i class="fa-solid fa-magnifying-glass fa-xl"></i> Cerca</a>
                             </li>
 
                             <li>
-                                <a href="#">La tua libreria</a>
+                                <a href="#"><i class="fa-solid fa-lines-leaning fa-xl"></i></i> La tua libreria</a>
                             </li>
 
                         </ul>
 
                     </nav>
 
-                    <h2>PLAYLIST</h2>
+                    <h2 class="p-color txt-size">PLAYLIST</h2>
 
                     <div class="build-pl">
 
-                        <button>+</button> 
+                        <button><i class="fa-solid fa-plus fa-xl"></i></button> 
 
-                        <span>Crea Playlist</span>
+                        <span class="p-color">Crea Playlist</span>
 
                     </div>
 
@@ -96,15 +105,19 @@
 
                     </nav>
 
-                    <div class="profile-container txt-center">
+                    <div class="profile-container">
 
-                        <span>Install app</span>
+                        <a href="#"><i class="fa-regular fa-circle-down"></i> Install app</a>
 
                         <hr>
 
-                        <div class="profile">
+                        <div class="profile flex">
 
-                            <!-- <img src="img/profile.svg" alt="img profile"> -->
+                            <div class="cont-img">
+    
+                                <img src="img/profile.svg" alt="img profile">                                
+
+                            </div>
 
                             <span>Jhon Doe</span>
 

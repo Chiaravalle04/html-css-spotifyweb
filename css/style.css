@@ -11,6 +11,11 @@
 }
 
 /* Regole Generali */
+:root {
+    --color-txt-base: #676767;
+    --color-txt-hover: #ffffff;
+}
+
 ul {
     list-style: none;
 }
@@ -27,7 +32,140 @@ a {
     text-align: center;
 }
 
+.p-color {
+    color: var(--color-txt-hover);
+}
+
+.txt-size {
+    font-size: 1rem;
+}
+
 /* Main */
+
+/* Aside */
+aside {
+    width: 15.6rem;
+    height: 100vh;
+    padding-left: 1rem;
+    position: relative;
+    background-color: #000000;
+}
+
+.a-logo {
+    width: 100%;
+    height: 4rem;
+}
+
+.debug .a-logo img {
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem 5rem 0.5rem 0;
+}
+
+.profile-container {
+    padding: 0 1rem;
+    position: absolute;
+    left: 0;
+    bottom: 5rem;
+    right: 0;
+}
+
+#main-nav {
+    margin: 1.5rem 0;
+}
+
+#main-nav ul li:hover a {
+    color: var(--color-txt-hover);
+}
+
+#main-nav ul li:first-child a {
+    color: var(--color-txt-hover);
+}
+
+#main-nav ul li {
+    padding: 0.5rem 0;
+}
+
+#main-nav ul li a{
+    padding: 0.5rem 5rem 0.5rem 0;
+    color: var(--color-txt-base);
+    font-weight: bold;
+}
+
+.build-pl {
+    margin: 1.5rem 0;
+}
+
+.build-pl button {
+    display: inline-block;
+    border: none;
+    color: #000000;
+    padding: 0.8rem;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.build-pl span {
+    font-weight: bold;
+    margin-left: 1rem;
+}
+
+#playlist-nav {
+    overflow: auto;
+}
+
+#playlist-nav ul li {
+    padding: 0.3rem 0;
+    font-weight: bold;
+}
+
+#playlist-nav ul li a {
+    color: var(--color-txt-base);
+}
+
+#playlist-nav ul li:hover a {
+    color: var(--color-txt-hover);
+}
+
+.profile-container {
+    background-color: #000000;
+}
+
+.profile-container a {
+    display: inline-block;
+    padding: 0.3rem 0;
+    color: var(--color-txt-base);
+    font-weight: bold;
+}
+
+.profile-container a:hover {
+    color: var(--color-txt-hover);
+}
+
+.profile {
+    align-items: center;
+}
+
+.profile .cont-img{
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--color-txt-base);
+    border-radius: 50%;
+    margin: 0.4rem 0.2rem 0.4rem 0;
+}
+
+.profile .cont-img img {
+    width: 100%;
+    height: 80%;
+}
+
+.profile > span {
+    color: var(--color-txt-hover);
+    font-weight: bold;
+} 
+
 /* Main Section */
 .main-container {
     width: calc(100% - 15.6rem);
@@ -52,25 +190,10 @@ a {
     justify-content: center;
 }
 
-/* Aside */
-aside {
-    width: 15.6rem;
-    height: 100vh;
-    position: relative;
-}
-
-.profile-container {
-    padding: 0 1rem;
-    position: absolute;
-    left: 0;
-    bottom: 6.25rem;
-    right: 0;
-}
-
 /* Player */
 #player {
     width: 100%;
-    height: 6.25rem;
+    height: 5rem;
     position: fixed;
     left: 0;
     bottom: 0;
@@ -148,22 +271,6 @@ aside {
     width: 200px;
     height: 200px;
     background-color: #fff;
-}
-
-/* db-Aside */
-.debug aside {
-    background-color: red;
-}
-
-.debug .a-logo {
-    width: 100%;
-    min-height: 4rem;
-    background-color: orange;
-    border: 2px dashed black;
-}
-
-.debug .profile-container {
-    background-color: aqua;
 }
 
 /* db-Player */
