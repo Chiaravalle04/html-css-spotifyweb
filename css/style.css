@@ -199,6 +199,7 @@ aside {
     bottom: 0;
     z-index: 30;
     justify-content: space-between;
+    background-color: #282828;
 }
 
 .container-song, .container-song-time, .container-song-volume {
@@ -210,8 +211,37 @@ aside {
     justify-content: space-between;
 }
 
+.container-song-time {
+    background-color: #282828;
+}
+
+.time-bar {
+    max-width: 30rem;
+    height: 0.2rem;
+    margin: 0 2rem;
+}
+
+.img-song img {
+    width: 100%;
+} 
+
+.name-song > h5 {
+    font-size: 0.7rem;
+    color: var(--color-txt-base);
+}
+
+.name-song {
+    padding: 0.7rem 0.4rem;
+}
+
 .container-song-volume {
     align-items: center;
+    gap: 1rem;
+    background-color: #282828;
+}
+
+.container-song-volume i {
+    color: var(--color-txt-hover);
 }
 
 .img-song {
@@ -222,12 +252,46 @@ aside {
 .icone-song {
     width: 3.5rem;
     height: 2.5rem;
+    line-height: 2.5rem;
+    color: var(--color-txt-base);
 }
 
-.icone-volume, .icone-time {
-    width: 1.5rem;
-    height: 1.5rem;
-    margin-right: 0.7rem;
+.container-icone-time {
+    gap: 1.2rem;
+    padding: 1.4rem 0;
+}
+
+.container-icone-time i {
+    color: var(--color-txt-hover);
+    cursor: pointer;
+}
+
+.container-icone-time .sc-hover:hover {
+    scale: 1.2;
+}
+
+.container-time-bar span {
+    font-size: 0.65rem;
+}
+
+.container-time-bar .time-bar {
+    background-color: var(--color-txt-base);
+    width: 30rem;
+    height: 0.2rem;
+    margin: 0 2rem;
+}
+
+.advance {
+    width: 5rem;
+    height: 100%;
+    background-color: var(--color-txt-hover);
+    text-align: end;
+}
+
+.volume-bar {
+    width: 8rem;
+    height: 0.2rem ;
+    background-color: var(--color-txt-base); 
 }
 
 .container-song-time {
@@ -274,13 +338,7 @@ aside {
 }
 
 /* db-Player */
-.debug #player {
-    background-color: green;
-}
 
-.debug .container-song, .container-song-time, .container-song-volume {
-    background-color: violet;
-}
 
 .debug .container-song, .container-song-volume {
     width: 15.6rem;
@@ -291,27 +349,7 @@ aside {
     width: 40rem;
 }
 
-.debug .img-song {
-    background-color: #fff;
-}
-
-.debug .icone-song {
-    background-color: #fff;
-}
-
 .debug .icone-volume, .icone-time {
     background-color: #fff;
 }
 
-.debug .volume-bar {
-    width: 8rem;
-    padding: 0.1rem 0;
-    background-color: #fff;
-}
-
-.debug .time-bar {
-    width: 30rem;
-    height: 0.2rem;
-    background-color: #fff;
-    margin: 0 2rem;
-}
