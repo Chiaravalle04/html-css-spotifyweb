@@ -170,24 +170,105 @@ aside {
 .main-container {
     width: calc(100% - 15.6rem);
     height: 100vh;
-    padding-bottom: 100px;
+    padding:0 2rem 100px 2rem;
     overflow: scroll;
+    background-color: #141922;
 }
 
 .top-bar {
     width: calc(100% - 15.6rem);
     height: 4rem;
-    padding: 0 0.5rem;
+    padding: 0 1rem;
     line-height: 4rem;
     text-align: end;
     position: fixed;
     left: 15.6rem;
     top: 0;
+    z-index: 30;
+}
+
+.top-bar a {
+    border: 2px solid var(--color-txt-hover);
+    padding: 0.6rem 0.8rem;
+    border-radius: 2rem;
+    color: var(--color-txt-hover);
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.top-bar a:hover {
+    padding: 0.7rem 0.9rem;
+    font-size: 0.9rem;
 }
 
 .title-categories {
     padding-top: 4.5rem;
     justify-content: center;
+}
+
+.title-categories ul li {
+    margin: 0 0.5rem;
+}
+
+.title-categories li a {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: var(--color-txt-base);
+}
+
+.title-categories li a:hover {
+    color: var(--color-txt-hover);
+}
+
+.main-container h2 {
+    margin: 2rem 0 1rem;
+}
+
+.cards {
+    padding: 2rem 0;
+    gap: 1.5rem;
+}
+
+.card {
+    position: relative;
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+.card:hover .overlay {
+    display: flex;
+}
+
+.overlay {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 2.5rem;
+    position: absolute;
+    width: 100%;
+    height: 66%;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.cards .card > h3 {
+    font-size: 0.9rem;
+    margin-top: 0.2rem;
+}
+
+.cards .card > p {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: var(--color-txt-base);
 }
 
 /* Player */
@@ -232,6 +313,11 @@ aside {
 
 .name-song {
     padding: 0.7rem 0.4rem;
+    cursor: pointer;
+}
+
+.name-song:hover h2 {
+    text-decoration: underline;
 }
 
 .container-song-volume {
@@ -242,6 +328,7 @@ aside {
 
 .container-song-volume i {
     color: var(--color-txt-hover);
+    cursor: pointer;
 }
 
 .img-song {
@@ -254,6 +341,11 @@ aside {
     height: 2.5rem;
     line-height: 2.5rem;
     color: var(--color-txt-base);
+    cursor: pointer;
+}
+
+.heart:hover, .folder:hover {
+    color: var(--color-txt-hover);
 }
 
 .container-icone-time {
@@ -288,10 +380,18 @@ aside {
     text-align: end;
 }
 
+.time-bar:hover .advance {
+    background-color: #81b71a;
+}
+
 .volume-bar {
     width: 8rem;
     height: 0.2rem ;
     background-color: var(--color-txt-base); 
+}
+
+.volume-bar:hover .advance {
+    background-color: #81b71a;
 }
 
 .container-song-time {
@@ -311,30 +411,14 @@ aside {
 /* db-Main Section */
 .debug #main-section {
     background-color: blue;
-}
-
-.debug .main-container {
-    background-color: springgreen;
-    border: 2px dashed #fff;
 } 
 
 .debug .top-bar {
-    background-color: darkgrey;
-}
-
-.debug .title-categories ul li {
-    margin: 0 1rem;
-}
-
-.debug .cards {
-    padding: 2rem;
-    gap: 3rem;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .debug .cards .card {
-    width: 200px;
-    height: 200px;
-    background-color: #fff;
+    width: 170px;
 }
 
 /* db-Player */
