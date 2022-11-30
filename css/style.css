@@ -45,6 +45,14 @@ aside {
     width: 100%;
 }
 
+.profile-container {
+    padding: 0 1rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
 /* Player */
 #player {
     width: 100%;
@@ -53,12 +61,57 @@ aside {
     left: 0;
     bottom: 0;
     width: 100%;
+    justify-content: space-between;
+}
+
+.container-song, .container-song-time, .container-song-volume {
+    height: 100%;
+}
+
+.container-song {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container-song-volume {
+    align-items: center;
+}
+
+.img-song {
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+.icone-song {
+    width: 3.5rem;
+    height: 2.5rem;
+}
+
+.icone-volume, .icone-time {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.7rem;
+}
+
+.container-song-time {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-time-bar {
+    align-items: center;
 }
 
 
 
 
 /* Debug */
+/* db-Main Section */
+.debug #main-section {
+    background-color: blue;
+}
+
 /* db-Aside */
 .debug aside {
     background-color: red;
@@ -74,11 +127,6 @@ aside {
 
 .debug .profile-container {
     background-color: aqua;
-    padding: 0 1rem;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    right: 0;
 }
 
 /* db-Player */
@@ -86,7 +134,40 @@ aside {
     background-color: green;
 }
 
-/* db-Main Section */
-.debug #main-section {
-    background-color: blue;
+.debug .container-song, .container-song-time, .container-song-volume {
+    background-color: violet;
+}
+
+.debug .container-song, .container-song-volume {
+    width: 15.6rem;
+    padding: 0 0.5rem;
+}
+
+.debug .container-song-time {
+    width: 40rem;
+}
+
+.debug .img-song {
+    background-color: #fff;
+}
+
+.debug .icone-song {
+    background-color: #fff;
+}
+
+.debug .icone-volume, .icone-time {
+    background-color: #fff;
+}
+
+.debug .volume-bar {
+    width: 8rem;
+    padding: 0.1rem 0;
+    background-color: #fff;
+}
+
+.debug .time-bar {
+    width: 30rem;
+    height: 0.2rem;
+    background-color: #fff;
+    margin: 0 2rem;
 }
