@@ -9,3 +9,28 @@
 * {
     font-family: 'Montserrat', sans-serif;
 }
+
+
+
+
+/* Debug */
+/* db-Aside */
+.debug aside {
+    max-width: 250px;
+    min-height: calc(100vh - 100px);
+    background-color: red;
+}
+
+/* db-Player */
+.debug #player {
+    width: 100%;
+    height: 100px;
+    background-color: green;
+}
+
+/* db-Main Section */
+.debug #main-section {
+    width: 100%
+    height: 100vh;
+    background-color: blue;
+}
