@@ -62,6 +62,7 @@ aside {
 /* db-Aside */
 .debug aside {
     background-color: red;
+    position: relative;
 }
 
 .debug .a-logo {
@@ -73,6 +74,11 @@ aside {
 
 .debug .profile-container {
     background-color: aqua;
+    padding: 0 1rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
 }
 
 /* db-Player */
