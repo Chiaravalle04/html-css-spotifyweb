@@ -56,18 +56,10 @@ aside {
     height: 4rem;
 }
 
-.debug .a-logo img {
+.a-logo img {
     width: 100%;
     height: 100%;
     padding: 0.5rem 5rem 0.5rem 0;
-}
-
-.profile-container {
-    padding: 0 1rem;
-    position: absolute;
-    left: 0;
-    bottom: 5rem;
-    right: 0;
 }
 
 #main-nav {
@@ -130,6 +122,11 @@ aside {
 }
 
 .profile-container {
+    padding: 0 1rem;
+    position: absolute;
+    left: 0;
+    bottom: 5rem;
+    right: 0;
     background-color: #000000;
 }
 
@@ -166,7 +163,7 @@ aside {
     font-weight: bold;
 } 
 
-/* Main Section */
+/* Main Container */
 .main-container {
     width: calc(100% - 15.6rem);
     height: 100vh;
