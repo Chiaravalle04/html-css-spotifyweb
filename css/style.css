@@ -398,10 +398,24 @@ aside {
     width: 10%;
     height: 100%;
     background-color: var(--color-txt-hover);
+    position: relative;
+}
+
+.advance i {
+    position: absolute;
+    right: -1rem;
+    top: -0.35rem;
+    color: var(--color-txt-hover);
+    cursor: pointer;
+    display: none;
 }
 
 .time-bar:hover .advance {
     background-color: #81b71a;
+}
+
+.time-bar:hover .advance i {
+    display: block;
 }
 
 .volume-bar {
@@ -412,6 +426,10 @@ aside {
 
 .volume-bar:hover .advance {
     background-color: #81b71a;
+}
+
+.volume-bar:hover .advance i {
+    display: block;
 }
 
 .container-song-time {
