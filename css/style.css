@@ -40,12 +40,16 @@ a {
     font-size: 1rem;
 }
 
+.d-mob {
+    display: none;
+}
+
 /* Main */
 
 /* Aside */
 aside {
     width: 15.6rem;
-    height: 100vh;
+    min-height: calc(100vh - 5rem);
     padding-left: 1rem;
     position: relative;
     background-color: #000000;
@@ -125,7 +129,7 @@ aside {
     padding: 0 1rem;
     position: absolute;
     left: 0;
-    bottom: 5rem;
+    bottom: 0;
     right: 0;
     background-color: #000000;
 }
@@ -166,9 +170,9 @@ aside {
 /* Main Container */
 .main-container {
     width: calc(100% - 15.6rem);
-    height: 100vh;
-    padding:0 2rem 100px 2rem;
-    overflow: scroll;
+    height: calc(100vh - 5rem);
+    padding:0 2rem;
+    overflow: auto;
     background-color: #141922;
 }
 
@@ -182,6 +186,7 @@ aside {
     left: 15.6rem;
     top: 0;
     z-index: 30;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .top-bar a {
@@ -200,6 +205,11 @@ aside {
 
 .title-categories {
     padding-top: 4.5rem;
+    justify-content: center;
+}
+
+.title-categories ul{
+    flex-wrap: wrap;
     justify-content: center;
 }
 
@@ -223,10 +233,11 @@ aside {
 
 .cards {
     padding: 2rem 0;
-    gap: 1.5rem;
+    gap: 1rem;
 }
 
 .card {
+    width: 170px;
     position: relative;
     cursor: pointer;
 }
@@ -250,19 +261,23 @@ aside {
     font-size: 2.5rem;
     position: absolute;
     width: 100%;
-    height: 66%;
     top: 0;
+    height: calc(100% - 6.70rem);
     justify-content: center;
     align-items: center;
     cursor: pointer;
 }
 
-.cards .card > h3 {
+.card-txt {
+    height: 6.25rem;
+}
+
+.cards .card .card-txt > h3 {
     font-size: 0.9rem;
     margin-top: 0.2rem;
 }
 
-.cards .card > p {
+.cards .card .card-txt > p {
     font-size: 0.8rem;
     font-weight: bold;
     color: var(--color-txt-base);
@@ -284,6 +299,15 @@ aside {
     height: 100%;
 }
 
+.container-song, .container-song-volume {
+    width: 20%;
+    padding: 0 0.5rem;
+}
+
+.container-song-time {
+    width: 45%;
+}
+
 .container-song {
     align-items: center;
     justify-content: space-between;
@@ -301,15 +325,17 @@ aside {
 
 .img-song img {
     width: 100%;
+    margin-top: 0.7rem;
 } 
 
 .name-song > h5 {
-    font-size: 0.7rem;
+    font-size: 0.5rem;
     color: var(--color-txt-base);
 }
 
 .name-song {
     padding: 0.7rem 0.4rem;
+    margin-top: 0.7rem;
     cursor: pointer;
 }
 
@@ -318,6 +344,7 @@ aside {
 }
 
 .container-song-volume {
+    justify-content: flex-end;
     align-items: center;
     gap: 1rem;
     background-color: #282828;
@@ -334,9 +361,6 @@ aside {
 }
 
 .icone-song {
-    width: 3.5rem;
-    height: 2.5rem;
-    line-height: 2.5rem;
     color: var(--color-txt-base);
     cursor: pointer;
 }
@@ -367,14 +391,13 @@ aside {
     background-color: var(--color-txt-base);
     width: 30rem;
     height: 0.2rem;
-    margin: 0 2rem;
+    margin: 0 0.5rem;
 }
 
 .advance {
-    width: 5rem;
+    width: 10%;
     height: 100%;
     background-color: var(--color-txt-hover);
-    text-align: end;
 }
 
 .time-bar:hover .advance {
@@ -398,39 +421,79 @@ aside {
 }
 
 .container-time-bar {
+    width: 100%;
+    justify-content: center;
     align-items: center;
 }
 
 
+/* Media Query */
+@media screen and (max-width: 1100px) {
 
+    .cards {
+        flex-wrap: wrap;
+    }
 
-/* Debug */
-/* db-Main Section */
-.debug #main-section {
-    background-color: blue;
-} 
-
-.debug .top-bar {
-    background-color: rgba(0, 0, 0, 0.5);
 }
 
-.debug .cards .card {
-    width: 170px;
+@media screen and (max-width: 500px) {
+
+    aside {
+        width: 5rem;
+        padding: 0;
+    }
+
+    .d-mob {
+        display: block;
+    }
+
+    aside h2, .build-pl, #playlist-nav {
+        display: none;
+    }
+
+    .d-none {
+        display: none;
+    } 
+
+    .a-logo {
+        margin: 0.5rem;
+    }
+
+    .a-logo img {
+        width: 80%;
+        height: 100%;
+        padding: 0;
+    }
+
+    #main-nav ul li a {
+        padding: 0;
+    }
+
+    #main-nav {
+        text-align: center;
+    }
+
+    .profile-container a:first-child {
+        display: none;
+    }
+
+    .profile-container a {
+        padding: 0.5rem 0.9rem;
+    }
+
+    .profile {
+        justify-content: center;
+    }
+
+    .top-bar {
+        width: calc(100% - 5rem);
+        left: 5rem;
+    }
+
+    .main-container {
+        width: calc(100% - 5rem);
+    }
+
 }
 
-/* db-Player */
-
-
-.debug .container-song, .container-song-volume {
-    width: 15.6rem;
-    padding: 0 0.5rem;
-}
-
-.debug .container-song-time {
-    width: 40rem;
-}
-
-.debug .icone-volume, .icone-time {
-    background-color: #fff;
-}
 
